@@ -35,7 +35,7 @@
   "output": [
     {
       "config": null,
-      "filename": "/runpod-volume/stable-diffusion-webui/models/Stable-diffusion/deliberate_v2.safetensors",
+      "filename": "/runpod-volume/stable-diffusion-webui-forge/models/Stable-diffusion/deliberate_v2.safetensors",
       "hash": null,
       "model_name": "deliberate_v2",
       "sha256": null,
@@ -43,7 +43,7 @@
     },
     {
       "config": null,
-      "filename": "/runpod-volume/stable-diffusion-webui/models/Stable-diffusion/disneyPixarCartoon_v10.safetensors",
+      "filename": "/runpod-volume/stable-diffusion-webui-forge/models/Stable-diffusion/disneyPixarCartoon_v10.safetensors",
       "hash": null,
       "model_name": "disneyPixarCartoon_v10",
       "sha256": null,
@@ -51,7 +51,7 @@
     },
     {
       "config": null,
-      "filename": "/runpod-volume/stable-diffusion-webui/models/Stable-diffusion/pixarStyleModel_v10.safetensors",
+      "filename": "/runpod-volume/stable-diffusion-webui-forge/models/Stable-diffusion/pixarStyleModel_v10.safetensors",
       "hash": null,
       "model_name": "pixarStyleModel_v10",
       "sha256": null,

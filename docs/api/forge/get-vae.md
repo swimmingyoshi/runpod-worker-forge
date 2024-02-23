@@ -34,7 +34,7 @@
   "id": "sync-33f33e48-6814-497f-85ba-bb1e26f9d248",
   "output": [
     {
-      "filename": "/runpod-volume/stable-diffusion-webui/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors",
+      "filename": "/runpod-volume/stable-diffusion-webui-forge/models/VAE/vae-ft-mse-840000-ema-pruned.safetensors",
       "model_name": "vae-ft-mse-840000-ema-pruned.safetensors"
     }
   ],

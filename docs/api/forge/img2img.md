@@ -18,8 +18,6 @@
         "sd_vae": "sdxl_vae.safetensors"
       },
       "override_settings_restore_afterwards": true,
-      "refiner_checkpoint": "sd_xl_refiner_1.0",
-      "refiner_switch_at": 0.8,
       "prompt": "at the ocean",
       "negative_prompt": "",
       "seed": -1,

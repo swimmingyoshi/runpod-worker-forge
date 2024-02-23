@@ -18,8 +18,6 @@
         "sd_vae": "sdxl_vae.safetensors"
       },
       "override_settings_restore_afterwards": true,
-      "refiner_checkpoint": "sd_xl_refiner_1.0",
-      "refiner_switch_at": 0.8,
       "prompt": "an astronaut riding a horse",
       "negative_prompt": "",
       "seed": -1,
@@ -31,16 +29,16 @@
       "height": 640,
       "sampler_name": "DPM++ SDE Karras",
       "sampler_index": "DPM++ SDE Karras",
-      "restore_faces": False,
+      "restore_faces": false,
       "alwayson_scripts": {
         "controlnet": {
           "args": [
             {
               "module": "canny",
-              "model": "control_v11p_sd15_canny",
+              "model": "control_v11p_sd15_canny [d14c016b]",
               "weight": 1,
               "resize_mode": "Crop and Resize",
-              "lowvram": False,
+              "lowvram": false,
               "processor_res": 512,
               "threshold_a": 75,
               "threshold_b": 75,
@@ -48,7 +46,7 @@
               "guidance_start": 0,
               "guidance_end": 1,
               "control_mode": "Balanced",
-              "pixel_perfect": False
+              "pixel_perfect": false
             }
           ]
         }

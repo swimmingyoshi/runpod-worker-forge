@@ -37,7 +37,7 @@
       "alias": "3DMM_V12",
       "metadata": {},
       "name": "3DMM_V12",
-      "path": "/runpod-volume/stable-diffusion-webui/models/Lora/3DMM_V12.safetensors"
+      "path": "/runpod-volume/stable-diffusion-webui-forge/models/Lora/3DMM_V12.safetensors"
     },
     {
       "alias": "80s Movie Poster Style v2",
@@ -158,7 +158,7 @@
         "sshs_model_hash": "422c40df3445bff890e00a900fc6bc10930677dcc48d0e2aeab4eb8a4ce9f811"
       },
       "name": "80s Movie Poster Style v1.5",
-      "path": "/runpod-volume/stable-diffusion-webui/models/Lora/80s Movie Poster Style v1.5.safetensors"
+      "path": "/runpod-volume/stable-diffusion-webui-forge/models/Lora/80s Movie Poster Style v1.5.safetensors"
     },
     {
       "alias": "1930Model",
@@ -170,7 +170,7 @@
         "sshs_model_hash": "37661537db5151692eff340bfb7d06038da0948b91562bc43807366f0ad8722a"
       },
       "name": "1930Model",
-      "path": "/runpod-volume/stable-diffusion-webui/models/Lora/1930Model.safetensors"
+      "path": "/runpod-volume/stable-diffusion-webui-forge/models/Lora/1930Model.safetensors"
     },
     {
       "alias": "Caricature_by_vizsumit",
@@ -272,7 +272,7 @@
         "sshs_model_hash": "add446b1bea2c6f9dc711157bc953934fed228eaa8a40c6b430709ba17d09667"
       },
       "name": "Caricature_by_vizsumit",
-      "path": "/runpod-volume/stable-diffusion-webui/models/Lora/Caricature_by_vizsumit.safetensors"
+      "path": "/runpod-volume/stable-diffusion-webui-forge/models/Lora/Caricature_by_vizsumit.safetensors"
     },
     {
       "alias": "Drawing1",
@@ -1452,7 +1452,7 @@
         "sshs_model_hash": "0f44631f0ac2e8cb7a5da19e20dcec5452a3bb641b66c9980d4d293f7bcbec37"
       },
       "name": "Drawing",
-      "path": "/runpod-volume/stable-diffusion-webui/models/Lora/Drawing.safetensors"
+      "path": "/runpod-volume/stable-diffusion-webui-forge/models/Lora/Drawing.safetensors"
     },
     {
       "alias": "pixarStyleModel_lora128",
@@ -1463,7 +1463,7 @@
         "sshs_model_hash": "d4c3face6e2eed37f7633c39a2237ce8dcc8956b07e6f0daad48f8fbc8c43144"
       },
       "name": "pixarStyleModel_lora128",
-      "path": "/runpod-volume/stable-diffusion-webui/models/Lora/pixarStyleModel_lora128.safetensors"
+      "path": "/runpod-volume/stable-diffusion-webui-forge/models/Lora/pixarStyleModel_lora128.safetensors"
     }
   ],
   "status": "COMPLETED"

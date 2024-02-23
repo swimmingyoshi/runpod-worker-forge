@@ -34,7 +34,7 @@
   "id": "sync-4cd071c7-924a-4b2b-a4ca-4b6292cf93f0",
   "output": [
     {
-      "cmd_dir": "/runpod-volume/stable-diffusion-webui/models/Codeformer",
+      "cmd_dir": "/runpod-volume/stable-diffusion-webui-forge/models/Codeformer",
       "name": "CodeFormer"
     },
     {
