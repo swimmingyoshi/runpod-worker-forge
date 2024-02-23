@@ -30,7 +30,7 @@ if __name__ == '__main__':
                             True,                               #1 Enable ReActor
                             '0',                                #2 Comma separated face number(s) from swap-source image
                             '0',                                #3 Comma separated face number(s) for target image (result)
-                            '/runpod-volume/stable-diffusion-webui/models/insightface/inswapper_128.onnx', #4 model path
+                            '/runpod-volume/stable-diffusion-webui-forge/models/insightface/inswapper_128.onnx', #4 model path
                             'CodeFormer',                       #5 Restore Face: None; CodeFormer; GFPGAN
                             1,                                  #6 Restore visibility value
                             True,                               #7 Restore face -> Upscale
@@ -49,11 +49,11 @@ if __name__ == '__main__':
                             'CUDA',                             #20 #20 CPU or CUDA (if you have it), CPU - by default,
                             True,                               #21 Face Mask Correction
                             0,                                  #22 Select Source, 0 - Image, 1 - Face Model, 2 - Source Folder
-                            None,                               #23 Filename of the face model (from "models/reactor/faces"), e.g. elena.safetensors
-                            '/workspace/PATH_TO_FACES_IMAGES',  #24 The path to the folder containing source faces images, don't forger to set #22 to 2
-                            None,                               #25 skip it for API
-                            True,                               #26 Randomly select an image from the path
-                            True                                #27 Force Upscale even if no face found
+                            #None,                               #23 Filename of the face model (from "models/reactor/faces"), e.g. elena.safetensors
+                            #'/workspace/PATH_TO_FACES_IMAGES',  #24 The path to the folder containing source faces images, don't forger to set #22 to 2
+                            #None,                               #25 skip it for API
+                            #True,                               #26 Randomly select an image from the path
+                            #True                                #27 Force Upscale even if no face found
                         ]
                     }
                 }
