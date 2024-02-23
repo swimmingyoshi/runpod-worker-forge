@@ -13,9 +13,8 @@ Network Volume.
 
 This worker includes the following extensions:
 
-1. [ControlNet](https://github.com/Mikubill/sd-webui-controlnet)
+1. ControlNet (built-in)
 2. [ReActor](https://github.com/Gourieff/sd-webui-reactor)
-3. [ADetailer](https://github.com/Bing-su/adetailer)
 
 ## Testing
 

@@ -57,18 +57,11 @@ python3 -m install-forge --skip-torch-cuda-test
 cd /workspace/stable-diffusion-webui-forge
 git clone https://github.com/Gourieff/sd-webui-reactor.git extensions/sd-webui-reactor
 
-# Clone the After Detailer Extension
-git clone --depth=1 https://github.com/Bing-su/adetailer.git extensions/adetailer
-
 # Install dependencies for ReActor
 cd /workspace/stable-diffusion-webui-forge/extensions/sd-webui-reactor
 git checkout v0.6.1
 pip3 install -r requirements.txt
 pip3 install onnxruntime-gpu
-
-# Install dependencies for After Detailer
-cd /workspace/stable-diffusion-webui-forge/extensions/adetailer
-python3 -m install
 
 # Install the model for ReActor
 mkdir -p /workspace/stable-diffusion-webui-forge/models/insightface
