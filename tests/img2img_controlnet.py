@@ -36,7 +36,7 @@ if __name__ == '__main__':
                         "args": [
                             {
                                 "module": "canny",
-                                "model": "control_v11p_sd15_canny",
+                                "model": "control_v11p_sd15_canny [d14c016b]",
                                 "weight": 1,
                                 "resize_mode": "Crop and Resize",
                                 "lowvram": False,
