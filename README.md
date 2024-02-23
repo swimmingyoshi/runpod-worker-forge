@@ -1,8 +1,8 @@
-# A1111 Stable Diffusion | RunPod Serverless Worker
+# Stable Diffusion WebUI Forge | RunPod Serverless Worker
 
 This is the source code for a [RunPod](https://runpod.io?ref=2xxro4sy)
-Serverless worker that uses the [Automatic1111 Stable Diffusion API](
-https://github.com/AUTOMATIC1111/stable-diffusion-webui) for inference.
+Serverless worker that uses the [Stable Diffusion WebUI Forge API](
+https://github.com/lllyasviel/stable-diffusion-webui-forge) for inference.
 
 ## Model
 
@@ -11,7 +11,7 @@ Network Volume.
 
 ## Extensions
 
-This worker includes the following A1111 extensions:
+This worker includes the following extensions:
 
 1. [ControlNet](https://github.com/Mikubill/sd-webui-controlnet)
 2. [ReActor](https://github.com/Gourieff/sd-webui-reactor)
@@ -24,7 +24,7 @@ This worker includes the following A1111 extensions:
 
 ## Installing, Building and Deploying the Serverless Worker
 
-1. [Install Automatic1111 Web UI on your Network Volume](
+1. [Install Stable Diffusion WebUI Forge on your Network Volume](
 docs/installing.md)
 2. [Building the Docker image](docs/building.md)
 3. [Deploying on RunPod Serveless](docs/deploying.md)
@@ -51,34 +51,34 @@ was successful.
 
 ### RunPod API Examples
 
-#### A1111 APIs
+#### Stable Diffusion WebUI Forge APIs
 
-* [Get ControlNet Models](docs/api/a1111/get-controlnet-models.md)
-* [Get Embeddings](docs/api/a1111/get-embeddings.md)
-* [Get Face Restorers](docs/api/a1111/get-face-restorers.md)
-* [Get Hypernetworks](docs/api/a1111/get-hypernetworks.md)
-* [Get Loras](docs/api/a1111/get-loras.md)
-* [Get Memory](docs/api/a1111/get-memory.md)
-* [Get Models](docs/api/a1111/get-models.md)
-* [Get Options](docs/api/a1111/get-options.md)
-* [Get Prompt Styles](docs/api/a1111/get-prompt-styles.md)
-* [Get Real-ESRGAN Models](docs/api/a1111/get-realesrgan-models.md)
-* [Get Samplers](docs/api/a1111/get-samplers.md)
-* [Get Script Info](docs/api/a1111/get-script-info.md)
-* [Get Scripts](docs/api/a1111/get-scripts.md)
-* [Get Upscalers](docs/api/a1111/get-upscalers.md)
-* [Get VAE](docs/api/a1111/get-vae.md)
-* [Image to Image](docs/api/a1111/img2img.md)
-* [Image to Image with ControlNet](docs/api/a1111/img2img-controlnet.md)
-* [Interrogate](docs/api/a1111/interrogate.md)
-* [Refresh Checkpoints](docs/api/a1111/refresh-checkpoints.md)
-* [Refresh Loras](docs/api/a1111/refresh-loras.md)
-* [Set Model](docs/api/a1111/set-model.md)
-* [Set VAE](docs/api/a1111/set-vae.md)
-* [Text to Image](docs/api/a1111/txt2img.md)
-* [Text to Image with ReActor](docs/api/a1111/txt2img-reactor.md)
-* [Text to Image with ADetailer](docs/api/a1111/txt2img-adetailer.md)
-* [Text to Image with InstantID](docs/api/a1111/txt2img-instantid.md)
+* [Get ControlNet Models](docs/api/forge/get-controlnet-models.md)
+* [Get Embeddings](docs/api/forge/get-embeddings.md)
+* [Get Face Restorers](docs/api/forge/get-face-restorers.md)
+* [Get Hypernetworks](docs/api/forge/get-hypernetworks.md)
+* [Get Loras](docs/api/forge/get-loras.md)
+* [Get Memory](docs/api/forge/get-memory.md)
+* [Get Models](docs/api/forge/get-models.md)
+* [Get Options](docs/api/forge/get-options.md)
+* [Get Prompt Styles](docs/api/forge/get-prompt-styles.md)
+* [Get Real-ESRGAN Models](docs/api/forge/get-realesrgan-models.md)
+* [Get Samplers](docs/api/forge/get-samplers.md)
+* [Get Script Info](docs/api/forge/get-script-info.md)
+* [Get Scripts](docs/api/forge/get-scripts.md)
+* [Get Upscalers](docs/api/forge/get-upscalers.md)
+* [Get VAE](docs/api/forge/get-vae.md)
+* [Image to Image](docs/api/forge/img2img.md)
+* [Image to Image with ControlNet](docs/api/forge/img2img-controlnet.md)
+* [Interrogate](docs/api/forge/interrogate.md)
+* [Refresh Checkpoints](docs/api/forge/refresh-checkpoints.md)
+* [Refresh Loras](docs/api/forge/refresh-loras.md)
+* [Set Model](docs/api/forge/set-model.md)
+* [Set VAE](docs/api/forge/set-vae.md)
+* [Text to Image](docs/api/forge/txt2img.md)
+* [Text to Image with ReActor](docs/api/forge/txt2img-reactor.md)
+* [Text to Image with ADetailer](docs/api/forge/txt2img-adetailer.md)
+* [Text to Image with InstantID](docs/api/forge/txt2img-instantid.md)
 
 #### Helper APIs
 
@@ -111,19 +111,19 @@ in the JSON response.
 
 ## Acknowledgements
 
-- [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+- [Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)
 - [Generative Labs YouTube Tutorials](https://www.youtube.com/@generativelabs)
 
 ## Additional Resources
 
-- [Postman Collection for this Worker](RunPod_A1111_Worker.postman_collection.json)
+- [Postman Collection for this Worker](RunPod_Forge_Worker.postman_collection.json)
 - [Generative Labs YouTube Tutorials](https://www.youtube.com/@generativelabs)
 - [Getting Started With RunPod Serverless](https://trapdoor.cloud/getting-started-with-runpod-serverless/)
 - [Serverless | Create a Custom Basic API](https://blog.runpod.io/serverless-create-a-basic-api/)
 
 ## Community and Contributing
 
-Pull requests and issues on [GitHub](https://github.com/ashleykleynhans/runpod-worker-a1111)
+Pull requests and issues on [GitHub](https://github.com/ashleykleynhans/runpod-worker-forge)
 are welcome. Bug fixes and new features are encouraged.
 
 You can contact me and get help with deploying your Serverless
