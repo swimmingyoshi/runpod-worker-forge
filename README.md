@@ -18,9 +18,12 @@ This worker includes the following extensions:
 
 ## Known Issues
 
-1. InstantID is not currently functioning correctly.  There seems to
-   be a bug in the Forge built-in ControlNet, but I still need to confirm.
-2. After Detailer is not currently compatible with Forge and has been removed.
+1. ControlNet is not currently functioning correctly with the `txt2img` API.
+   I have logged an [issue](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues/375)
+   on Github for it.
+2. The SDXL Refiner model seems to be causing intermittent issues and has
+   been removed.
+3. After Detailer is not currently compatible with Forge and has been removed.
 
 ## Testing
 
