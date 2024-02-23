@@ -46,8 +46,8 @@ python3 -m venv /workspace/venv
 source /workspace/venv/bin/activate
 
 # Install Torch and xformers
-pip3 install --no-cache-dir torch==2.0.1+cu118 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip3 install --no-cache-dir xformers==0.0.22
+pip3 install --no-cache-dir torch==2.1.2+cu118 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip3 install --no-cache-dir xformers==0.0.23.post1
 
 # Install Stable Diffusion WebUI Forge
 wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/install-forge.py
@@ -56,13 +56,13 @@ python3 -m install-forge --skip-torch-cuda-test
 # Clone the ReActor Extension
 cd /workspace/stable-diffusion-webui-forge
 git clone https://github.com/Gourieff/sd-webui-reactor.git extensions/sd-webui-reactor
-git checkout v0.6.1
 
 # Clone the After Detailer Extension
 git clone --depth=1 https://github.com/Bing-su/adetailer.git extensions/adetailer
 
 # Install dependencies for ReActor
 cd /workspace/stable-diffusion-webui-forge/extensions/sd-webui-reactor
+git checkout v0.6.1
 pip3 install -r requirements.txt
 pip3 install onnxruntime-gpu
 
@@ -106,7 +106,7 @@ wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffus
 6. Download InstantID ControlNet models:
 ```bash
 wget -O ip-adapter_instant_id_sdxl.bin "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin?download=true"
-wget -O control_instant_id_sdxl.safetensors"https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true"
+wget -O control_instant_id_sdxl.safetensors "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true"
 ```
 7. Create logs directory:
 ```bash
