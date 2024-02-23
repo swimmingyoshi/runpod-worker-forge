@@ -1,9 +1,4 @@
-# Install Automatic1111 Web UI on your Network Volume
-
-> [!NOTE]
-> If you have previously installed A1111 on your Network volume,
-> but want to install the After Detailer extension, you can follow the
-> instructions [here](./installing-adetailer.md).
+# Install Stable Diffusion WebUI Forge on your Network Volume
 
 1. [Create a RunPod Account](https://runpod.io?ref=2xxro4sy).
 2. Create a [RunPod Network Volume](https://www.runpod.io/console/user/storage).
@@ -22,7 +17,7 @@ manually below, and then you don't need to follow any of the
 manual instructions.
 
 ```bash
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/scripts/install.sh
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/scripts/install.sh
 chmod +x install.sh
 ./install.sh
 ```
@@ -32,11 +27,11 @@ chmod +x install.sh
 You only need to complete the steps below if you did not run the
 automatic installation script above.
 
-1. Install the Automatic1111 WebUI and ControlNet extension:
+1. Install the Stable Diffusion WebUI Forge:
 ```bash
 # Clone the repo
 cd /workspace
-git clone --depth=1 https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+git clone --depth=1 https://github.com/lllyasviel/stable-diffusion-webui-forge.git
 
 # Upgrade Python
 apt update
@@ -46,7 +41,7 @@ apt -y upgrade
 python3 -V
 
 # Create and activate venv
-cd stable-diffusion-webui
+cd stable-diffusion-webui-forge
 python3 -m venv /workspace/venv
 source /workspace/venv/bin/activate
 
@@ -54,64 +49,57 @@ source /workspace/venv/bin/activate
 pip3 install --no-cache-dir torch==2.0.1+cu118 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip3 install --no-cache-dir xformers==0.0.22
 
-# Install A1111 Web UI
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/install-automatic.py
-python3 -m install-automatic --skip-torch-cuda-test
-
-# Clone the ControlNet Extension
-cd /workspace/stable-diffusion-webui
-git clone --depth=1 https://github.com/Mikubill/sd-webui-controlnet.git extensions/sd-webui-controlnet
+# Install Stable Diffusion WebUI Forge
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/install-forge.py
+python3 -m install-forge --skip-torch-cuda-test
 
 # Clone the ReActor Extension
+cd /workspace/stable-diffusion-webui-forge
 git clone https://github.com/Gourieff/sd-webui-reactor.git extensions/sd-webui-reactor
 git checkout v0.6.1
 
 # Clone the After Detailer Extension
 git clone --depth=1 https://github.com/Bing-su/adetailer.git extensions/adetailer
 
-# Install dependencies for ControlNet
-cd /workspace/stable-diffusion-webui/extensions/sd-webui-controlnet
-pip3 install -r requirements.txt
-
 # Install dependencies for ReActor
-cd /workspace/stable-diffusion-webui/extensions/sd-webui-reactor
+cd /workspace/stable-diffusion-webui-forge/extensions/sd-webui-reactor
 pip3 install -r requirements.txt
 pip3 install onnxruntime-gpu
 
 # Install dependencies for After Detailer
-cd /workspace/stable-diffusion-webui/extensions/adetailer
+cd /workspace/stable-diffusion-webui-forge/extensions/adetailer
 python3 -m install
 
 # Install the model for ReActor
-mkdir -p /workspace/stable-diffusion-webui/models/insightface
-cd /workspace/stable-diffusion-webui/models/insightface
+mkdir -p /workspace/stable-diffusion-webui-forge/models/insightface
+cd /workspace/stable-diffusion-webui-forge/models/insightface
 wget https://github.com/facefusion/facefusion-assets/releases/download/models/inswapper_128.onnx
 
 # Configure ReActor to use the GPU instead of CPU
-echo "CUDA" > /workspace/stable-diffusion-webui/extensions/sd-webui-reactor/last_device.txt
+echo "CUDA" > /workspace/stable-diffusion-webui-forge/extensions/sd-webui-reactor/last_device.txt
 ```
 2. Install the Serverless dependencies:
 ```bash
-cd /workspace/stable-diffusion-webui
+cd /workspace/stable-diffusion-webui-forge
 pip3 install huggingface_hub runpod
 ```
 3. Download some models, for example `SDXL` and `Deliberate v2`:
 ```bash
-cd /workspace/stable-diffusion-webui/models/Stable-diffusion
+cd /workspace/stable-diffusion-webui-forge/models/Stable-diffusion
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 wget -O deliberate_v2.safetensors https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v2.safetensors
 ```
 4. Download VAEs for SD 1.5 and SDXL:
 ```bash
-cd /workspace/stable-diffusion-webui/models/VAE
+cd /workspace/stable-diffusion-webui-forge/models/VAE
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
 ```
 5. Download ControlNet models, for example `canny` for SD 1.5 as well as SDXL:
 ```bash
-mkdir -p /workspace/stable-diffusion-webui/models/ControlNet
-cd /workspace/stable-diffusion-webui/models/ControlNet
+mkdir -p /workspace/stable-diffusion-webui-forge/models/ControlNet
+cd /workspace/stable-diffusion-webui-forge/models/ControlNet
 wget https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth
 wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_full.safetensors
 ```
@@ -126,17 +114,17 @@ mkdir -p /workspace/logs
 ```
 8. Install config files:
 ```bash
-cd /workspace/stable-diffusion-webui
+cd /workspace/stable-diffusion-webui-forge
 rm webui-user.sh config.json ui-config.json
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/webui-user.sh
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/config.json
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/ui-config.json
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/webui-user.sh
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/config.json
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/ui-config.json
 ```
 9. Run the Web UI:
 ```bash
 deactivate
 export HF_HOME="/workspace"
-cd /workspace/stable-diffusion-webui
+cd /workspace/stable-diffusion-webui-forge
 ./webui.sh -f
 ```
 10. Wait for the Web UI to start up, and download the models. You shoud
