@@ -12,10 +12,10 @@ if __name__ == '__main__':
                 "endpoint": "/sdapi/v1/txt2img"
             },
             "payload": {
-                "override_settings": {
+                "override_settings":{
                     "sd_model_checkpoint": "dynavisionXLAllInOneStylized_release0557Bakedvae",
-                    "sd_vae": "None",
-                    "CLIP_stop_at_last_layers": 2
+                    "CLIP_stop_at_last_layers": 2,
+                    "sd_vae": "Automatic"
                 },
                 "prompt": "Clown from the movie it",
                 "negative_prompt": "closed eyes, looking up, back and white, blush, white frame, frame, panties, ribs, muscular, busty, lens flare, bloom, red eyes, grayscale, monochrome, big breast, large breast, pubic hair, bad quality, low quality",
@@ -40,10 +40,11 @@ if __name__ == '__main__':
                         "args": [
                             {
                                 "input_image": image_content,
-                                "module": "instant_id_face_embedding",
+                                "module": "InsightFace (InstantID)",
                                 "model": "ip-adapter_instant_id_sdxl [eb2d3ec0]",
                                 "weight": 0.9,
                                 "resize_mode": "Crop and Resize",
+                                "lowvram": False,
                                 "processor_res": 1024,
                                 "threshold_a": 75,
                                 "threshold_b": 75,
@@ -59,6 +60,7 @@ if __name__ == '__main__':
                                 "model": "control_instant_id_sdxl [c5c25a50]",
                                 "weight": 1,
                                 "resize_mode": "Crop and Resize",
+                                "lowvram": False,
                                 "processor_res": 1024,
                                 "threshold_a": 75,
                                 "threshold_b": 75,
