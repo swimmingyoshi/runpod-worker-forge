@@ -16,6 +16,12 @@ This worker includes the following extensions:
 1. ControlNet (built-in)
 2. [ReActor](https://github.com/Gourieff/sd-webui-reactor)
 
+## Known Issues
+
+1. InstantID is not currently functioning correctly.  There seems to
+   be a bug in the Forge built-in ControlNet, but I still need to confirm.
+2. After Detailer is not currently compatible with Forge and has been removed.
+
 ## Testing
 
 1. [Local Testing](docs/testing/local.md)
