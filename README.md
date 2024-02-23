@@ -82,7 +82,6 @@ was successful.
 * [Set VAE](docs/api/forge/set-vae.md)
 * [Text to Image](docs/api/forge/txt2img.md)
 * [Text to Image with ReActor](docs/api/forge/txt2img-reactor.md)
-* [Text to Image with ADetailer](docs/api/forge/txt2img-adetailer.md)
 * [Text to Image with InstantID](docs/api/forge/txt2img-instantid.md)
 
 #### Helper APIs
