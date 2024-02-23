@@ -222,7 +222,7 @@ def handler(job):
             logger.error(f'Response: {response.json()}', job['id'])
 
             return {
-                'error': f'A1111 status code: {response.status_code}',
+                'error': f'HTTP status code: {response.status_code}',
                 'output': response.json(),
                 'refresh_worker': True
             }
@@ -237,7 +237,7 @@ def handler(job):
 
 if __name__ == "__main__":
     wait_for_service(f'{BASE_URI}/sdapi/v1/sd-models')
-    logger.info('A1111 Stable Diffusion API is ready')
+    logger.info('Stable Diffusion WebUI Forge API is ready')
     logger.info('Starting RunPod Serverless...')
     runpod.serverless.start(
         {
