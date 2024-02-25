@@ -46,7 +46,7 @@ python3 -m venv /workspace/venv
 source /workspace/venv/bin/activate
 
 # Install Torch and xformers
-pip3 install --no-cache-dir torch==2.1.2+cu118 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip3 install --no-cache-dir torch==2.1.2 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip3 install --no-cache-dir xformers==0.0.23.post1
 
 # Install Stable Diffusion WebUI Forge
