@@ -123,6 +123,6 @@ cd /workspace/stable-diffusion-webui-forge
 10. Wait for the Web UI to start up, and download the models. You shoud
     see something like this when it is ready:
 ```
-Model loaded in 16.9s (calculate hash: 8.0s, load weights from disk: 0.4s, create model: 2.1s, apply weights to model: 2.6s, apply half(): 2.6s, move model to device: 0.7s, calculate empty prompt: 0.3s).
+Model loaded in 17.3s (calculate hash: 7.0s, forge load real models: 9.0s, calculate empty prompt: 1.0s).
 ```
 11. Press Ctrl-C to exit, and then you can terminate the pod.
