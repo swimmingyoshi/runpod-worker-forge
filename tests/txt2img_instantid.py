@@ -39,7 +39,7 @@ if __name__ == '__main__':
                     "controlnet": {
                         "args": [
                             {
-                                "input_image": image_content,
+                                "image": image_content,
                                 "module": "InsightFace (InstantID)",
                                 "model": "ip-adapter_instant_id_sdxl [eb2d3ec0]",
                                 "weight": 0.9,
@@ -55,7 +55,7 @@ if __name__ == '__main__':
                                 "pixel_perfect": True
                             },
                             {
-                                "input_image": image_content,
+                                "image": image_content,
                                 "module": "instant_id_face_keypoints",
                                 "model": "control_instant_id_sdxl [c5c25a50]",
                                 "weight": 1,
