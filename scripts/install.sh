@@ -24,7 +24,7 @@ pip3 install --no-cache-dir torch==2.1.2 torchvision torchaudio --index-url http
 echo "Installing xformers"
 pip3 install --no-cache-dir xformers==0.0.23.post1
 
-echo "Installing A1111 Web UI"
+echo "Installing Stable Diffusion WebUI Forge"
 wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/install-forge.py
 python3 -m install-forge --skip-torch-cuda-test
 
@@ -96,9 +96,9 @@ mkdir -p /workspace/logs
 echo "Installing config files"
 cd /workspace/stable-diffusion-webui-forge
 rm webui-user.sh config.json ui-config.json
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/webui-user.sh
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/config.json
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-a1111/main/ui-config.json
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/webui-user.sh
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/config.json
+wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/ui-config.json
 
 echo "Starting Stable Diffusion WebUI Forge"
 deactivate
