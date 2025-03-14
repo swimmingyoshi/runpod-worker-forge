@@ -109,6 +109,18 @@ def validate_payload(job):
     return endpoint, job['input']['api']['method'], validated_input
 
 
+def get_progress_info():
+    """Get the current progress information from the Stable Diffusion API"""
+    try:
+        progress_response = send_get_request('sdapi/v1/progress?skip_current_image=false')
+        if progress_response.status_code == 200:
+            return progress_response.json()
+        return None
+    except Exception as e:
+        logger.error(f'Error getting progress info: {e}')
+        return None
+
+
 def download(job):
     source_url = job['input']['payload']['source_url']
     download_path = job['input']['payload']['download_path']
@@ -216,7 +228,19 @@ def handler(job):
             response = send_post_request(endpoint, payload, job['id'])
 
         if response.status_code == 200:
-            return response.json()
+            result = response.json()
+            
+            # For status requests with stream=true parameter, add progress info
+            if (endpoint.startswith('sdapi/v1/') and 
+                'stream' in job['input'] and 
+                job['input']['stream'] == True):
+                
+                progress_info = get_progress_info()
+                if progress_info:
+                    # Add the progress information to the response
+                    result['stream'] = progress_info
+            
+            return result
         else:
             logger.error(f'HTTP Status code: {response.status_code}', job['id'])
             logger.error(f'Response: {response.json()}', job['id'])
