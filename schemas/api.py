@@ -12,6 +12,7 @@ API_SCHEMA = {
         'required': True,
         'constraints': lambda endpoint: endpoint in [
             'sdapi/v1/txt2img',
+            'sdapi/v1/progress',
             'sdapi/v1/img2img',
             'sdapi/v1/sd-models',
             'sdapi/v1/options',

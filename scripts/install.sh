@@ -70,9 +70,9 @@ mkdir -p /workspace/logs
 echo "Installing config files"
 cd /workspace/stable-diffusion-webui-forge
 rm webui-user.sh config.json ui-config.json
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/webui-user.sh
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/config.json
-wget https://raw.githubusercontent.com/ashleykleynhans/runpod-worker-forge/main/ui-config.json
+wget https://raw.githubusercontent.com/swimmingyoshi/runpod-worker-forge/main/webui-user.sh
+wget https://raw.githubusercontent.com/swimmingyoshi/runpod-worker-forge/main/config.json
+wget https://raw.githubusercontent.com/swimmingyoshi/runpod-worker-forge/main/ui-config.json
 
 echo "Starting Stable Diffusion WebUI Forge"
 deactivate
