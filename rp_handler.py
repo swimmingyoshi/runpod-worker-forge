@@ -112,7 +112,7 @@ def validate_payload(job):
 def get_progress_info():
     """Get the current progress information from the Stable Diffusion API"""
     try:
-        progress_response = send_get_request('sdapi/v1/progress?skip_current_image=false')
+        progress_response = send_get_request('sdapi/v1/progress')
         if progress_response.status_code == 200:
             return progress_response.json()
         return None
